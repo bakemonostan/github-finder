@@ -9,6 +9,7 @@ import NotFound from './Pages/NotFound';
 import { GithubProvider } from './context/github/GithubContext';
 import { AlertProvider } from './context/alert/AlertContext';
 import Alert from './components/layout/Alert';
+import User from './Pages/User';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
+                <Route path='/user/:login' element={<User />} />
                 <Route path='/404' element={<NotFound />} />
                 {/* catch all non-existing routes that wld send user to a 404 page */}
                 <Route path='/*' element={<NotFound />} />
