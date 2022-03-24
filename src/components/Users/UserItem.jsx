@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 // * user prop that is an object
 // * remember to pass prop types also
 
-function UserItem({ user: { login, avatar_url } }) {
+function UserItem({ user: { login, avatar_url, id } }) {
   return (
-    <div className='card shadow-md compact side bg-base-100'>
-      {/* div for the avatar image */}
-      <div className='flex-row items-center spcae-x-4 card-body'>
-        <div>
+    <div className='card shadow-md compact side bg-base-100' key={id}>
+      <div className='flex-row items-center spcae-x-4 card-body' key={id}>
+        <div key={id}>
           <div className='avatar'>
             <div className='rounded-full shadow w-14 h-14'>
               <img src={avatar_url} alt='Profile' />

@@ -11,9 +11,9 @@ function UserResults() {
       {!loading && (
         <div className='grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2'>
           {users.map((user) => (
-            <>
-              <UserItem key={users.id} user={user} />
-            </>
+            <div key={user.id}>
+              <UserItem key={user.id} user={user} />
+            </div>
           ))}
         </div>
       )}
